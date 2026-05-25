@@ -61,13 +61,26 @@
     "offers": [
       {
         "@type": "Offer",
-        "name": "Observe Plan",
-        "description": "Full signal coverage. Daily brief. You decide everything.",
-        "price": "1200",
+        "name": "Signal Plan",
+        "description": "Live demand dashboard, 40+ signal sources, weekly automated brief. No credit card required for trial.",
+        "price": "599",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "1200",
+          "price": "599",
+          "priceCurrency": "EUR",
+          "unitText": "MONTH"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Observe Plan",
+        "description": "Daily AI recommendations with evidence. You review, you decide, you stay in control.",
+        "price": "1190",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1190",
           "priceCurrency": "EUR",
           "unitText": "MONTH"
         }
@@ -75,22 +88,15 @@
       {
         "@type": "Offer",
         "name": "Co-Pilot Plan",
-        "description": "Auto-execution for routine actions. You approve strategy.",
-        "price": "2800",
+        "description": "Automated rate execution within guardrails. OTA distribution strategy. Direct PMS write-back.",
+        "price": "2490",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "2800",
+          "price": "2490",
           "priceCurrency": "EUR",
           "unitText": "MONTH"
         }
-      },
-      {
-        "@type": "Offer",
-        "name": "Execute Plan",
-        "description": "Full autonomous revenue orchestration. Multi-property. Custom pricing.",
-        "price": "0",
-        "priceCurrency": "EUR"
       }
     ]
   }
@@ -670,7 +676,7 @@
     .price-badge { display: inline-block; font-size: 0.63rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; padding: 4px 12px; border-radius: 100px; margin-bottom: 20px; }
     .price-card:not(.pop):not(.ent) .price-badge { background: rgba(255,255,255,.06); color: var(--t3); }
     .price-card.pop .price-badge { background: var(--cta-grad); color: #fff; }
-    .price-card.ent .price-badge { background: rgba(16,185,129,.15); color: #34d399; }
+    .price-card.ent .price-badge { background: rgba(139,92,246,.15); color: #a78bfa; }
     .price-name { font-size: 1.3rem; font-weight: 900; color: var(--t1); margin-bottom: 6px; letter-spacing: -.02em; }
     .price-tagline { font-size: 0.82rem; color: var(--t2); margin-bottom: 22px; line-height: 1.5; }
     .price-amount { font-size: 2.6rem; font-weight: 900; color: #fff; letter-spacing: -.03em; line-height: 1; }
@@ -1073,6 +1079,10 @@
     .footer-email:hover { color: #fff; }
 
     /* ── RESPONSIVE ──────────────────────────── */
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .price-amount { font-size: 2rem; }
+    }
     @media (max-width: 1100px) {
       .hero-cols { grid-template-columns: 1fr; gap: 48px; text-align: center; }
       .hero-sub { margin-left: auto; margin-right: auto; }
@@ -1086,7 +1096,7 @@
       .prob-grid, .feat-grid, .stages-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
       .metrics-grid { grid-template-columns: repeat(2,1fr); }
       .persona-grid { grid-template-columns: 1fr 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
       .testi-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
       .pilot-steps { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; gap: 36px; }
       .pilot-steps::before { display: none; }
@@ -1465,7 +1475,7 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#team">Team</a></li>
       </ul>
-      <span class="nav-btn-wrap"><a href="#early-access" class="btn-cta">Start Free Pilot</a></span>
+      <span class="nav-btn-wrap"><a href="#early-access" class="btn-cta">Start Free Trial</a></span>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -1478,7 +1488,7 @@
   <a href="#roi" class="mm-link">ROI Calculator</a>
   <a href="#pricing" class="mm-link">Pricing</a>
   <a href="#team" class="mm-link">Team</a>
-  <a href="#early-access" class="btn-cta">Start Free Pilot</a>
+  <a href="#early-access" class="btn-cta">Start Free Trial</a>
 </div>
 
 <!-- HERO -->
@@ -1503,7 +1513,7 @@
           koaland.ai monitors 40+ market signals, ranks decisions by revenue impact, and executes across your channels automatically. The intelligence layer your hotel has been missing.
         </p>
         <div class="hero-actions reveal d3">
-          <a href="#early-access" class="btn-cta lg">Get My Free 60-Day Pilot</a>
+          <a href="#early-access" class="btn-cta lg">Start My Free 30-Day Trial</a>
         </div>
         <div class="hero-reassure reveal d4">
           <span class="rchk">✓</span><span>Live in 72 hours</span>
@@ -1512,7 +1522,7 @@
           <span class="rsep">·</span>
           <span class="rchk">✓</span><span>GDPR compliant</span>
           <span class="rsep">·</span>
-          <span class="rchk">✓</span><span>60-day free pilot</span>
+          <span class="rchk">✓</span><span>30-day free trial</span>
         </div>
         <div class="hero-geo reveal d5" style="margin-top:24px;">Active in <strong>Maldives · Turkey · Greece · Germany · UK</strong></div>
       </div>
@@ -1927,7 +1937,7 @@
           </tr>
           <tr>
             <td class="cmp-feat">Free pilot</td>
-            <td class="cmp-us-cell" style="font-size:0.86rem;">60 days</td>
+            <td class="cmp-us-cell" style="font-size:0.86rem;">30 days</td>
             <td class="cmp-other" style="font-size:0.86rem;color:var(--t3);">Rare</td>
             <td class="cmp-other" style="font-size:0.86rem;color:var(--t3);">N/A</td>
             <td class="cmp-other" style="font-size:0.86rem;color:var(--t3);">Demo only</td>
@@ -2333,8 +2343,9 @@
         </div>
         <div class="roi-currency-row" style="margin-top:-10px;">
           <span class="roi-cur-lbl">Plan</span>
-          <button class="roi-cur-btn active" id="roi-plan-observe" onclick="setRoiPlan('observe')">Observe · €1,200/mo</button>
-          <button class="roi-cur-btn" id="roi-plan-copilot" onclick="setRoiPlan('copilot')">Co-Pilot · €2,800/mo</button>
+          <button class="roi-cur-btn active" id="roi-plan-signal" onclick="setRoiPlan('signal')">Signal · €599/mo</button>
+          <button class="roi-cur-btn" id="roi-plan-observe" onclick="setRoiPlan('observe')">Observe · €1,190/mo</button>
+          <button class="roi-cur-btn" id="roi-plan-copilot" onclick="setRoiPlan('copilot')">Co-Pilot · €2,490/mo</button>
         </div>
         <div class="roi-group">
           <label class="roi-label" for="roi-rooms">Number of rooms</label>
@@ -2377,15 +2388,15 @@
             <span class="roi-rv" id="roi-high">€354,780</span>
           </div>
           <div class="roi-row">
-            <span class="roi-rl" id="roi-cost-label">Observe plan cost (annual)</span>
-            <span class="roi-rv" id="roi-cost">€14,400</span>
+            <span class="roi-rl" id="roi-cost-label">Signal plan cost (annual)</span>
+            <span class="roi-rv" id="roi-cost">€7,188</span>
           </div>
           <div class="roi-row">
             <span class="roi-rl">Estimated ROI</span>
             <span class="roi-rv ok" id="roi-multiple">5 to 11x</span>
           </div>
         </div>
-        <p class="roi-disclaimer">Estimates based on published hospitality industry benchmarks. Actual results vary by market, property type, and operational maturity. A 60-day free pilot gives you real data before any commitment.</p>
+        <p class="roi-disclaimer">Estimates based on published hospitality industry benchmarks. Actual results vary by market, property type, and operational maturity. A 30-day free trial gives you real data before any commitment.</p>
       </div>
     </div>
 
@@ -2458,7 +2469,7 @@
       <div class="roi-preview-cta">
         <div>
           <div class="roi-preview-cta-text" id="prev-cta-text">Your property could surface briefs like this every morning.</div>
-          <div class="roi-preview-cta-sub">2 more decisions are waiting above. Unlock them with a 60-day free pilot.</div>
+          <div class="roi-preview-cta-sub">2 more decisions are waiting above. Unlock them with a free 30-day trial.</div>
           <div class="roi-preview-lock">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             No credit card. No setup fee. Live in 72 hours.
@@ -2565,61 +2576,61 @@
     <div class="center">
       <div class="eyebrow reveal">Pricing</div>
       <h2 class="sh reveal d1">Transparent. Aligned. No surprises.</h2>
-      <p class="sp reveal d2">Every plan starts with a 60-day free pilot. We earn our place at your table before you spend a euro.</p>
+      <p class="sp reveal d2">Every plan starts with a 30-day free trial. No credit card. No commitment. We earn our place at your table before you spend a euro.</p>
     </div>
     <div class="pricing-grid">
       <div class="price-card reveal d1">
-        <div class="price-badge">Starter</div>
-        <div class="price-name">Observe</div>
-        <div class="price-tagline">Full signal coverage. Daily brief. You decide everything.</div>
-        <div class="price-amount">€1,200<span class="per">/mo</span></div>
+        <div class="price-badge">Entry</div>
+        <div class="price-name">Signal</div>
+        <div class="price-tagline">See your data, unified. Know what's happening before your competition does.</div>
+        <div class="price-amount">€599<span class="per">/mo</span></div>
         <div class="price-divider"></div>
         <ul class="price-list">
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Daily AI intelligence brief</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>40+ signal sources monitored</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Decision recommendations with evidence</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Core analytics dashboard</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>40+ signal sources connected</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Live demand and competitor dashboard</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Weekly automated intelligence brief</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>PMS and OTA integration</li>
           <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
         </ul>
-        <a href="#early-access" class="price-cta">Start Free Pilot</a>
+        <a href="#early-access" class="price-cta">Start Free 30-Day Trial</a>
       </div>
       <div class="price-card pop reveal d2">
         <div class="price-badge">Most Popular</div>
+        <div class="price-name">Observe</div>
+        <div class="price-tagline">Daily recommendations with evidence. You review, you decide, you stay in control.</div>
+        <div class="price-amount">€1,190<span class="per">/mo</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Signal</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Daily AI decision recommendations</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>ADR opportunity alerts</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Competitor rate tracking</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Monthly performance report</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Institutional memory layer</li>
+        </ul>
+        <a href="#early-access" class="price-cta">Start Free 30-Day Trial</a>
+      </div>
+      <div class="price-card ent reveal d3">
+        <div class="price-badge">Full Automation</div>
         <div class="price-name">Co-Pilot</div>
-        <div class="price-tagline">Auto-execution for routine actions. You approve strategy.</div>
-        <div class="price-amount">€2,800<span class="per">/mo</span></div>
+        <div class="price-tagline">Auto-execution within your guardrails. The system works. You approve strategy.</div>
+        <div class="price-amount">€2,490<span class="per">/mo</span></div>
         <div class="price-divider"></div>
         <ul class="price-list">
           <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Observe</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Auto-execution for low-risk actions</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full integrations: PMS, Ads, OTAs</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Brief delivery to entire team</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Institutional memory layer</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated account manager</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Automated rate execution within guardrails</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>OTA distribution strategy</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Direct PMS write-back</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Team brief delivery</li>
+          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated account manager and quarterly review</li>
         </ul>
-        <a href="#early-access" class="price-cta">Start Free Pilot</a>
-      </div>
-      <div class="price-card ent reveal d3">
-        <div class="price-badge">Enterprise</div>
-        <div class="price-name">Execute</div>
-        <div class="price-tagline">Full orchestration. Multi-property. AI runs the engine.</div>
-        <div class="price-custom">Custom Pricing</div>
-        <div class="price-divider"></div>
-        <ul class="price-list">
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Co-Pilot</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full autonomous revenue orchestration</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Multi-property support</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom AI training on your data</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ownership-level reporting suite</li>
-          <li><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Priority support and strategy sessions</li>
-        </ul>
-        <a href="mailto:grow@koaland.ai" class="price-cta">Talk to Sales</a>
+        <a href="#early-access" class="price-cta">Start Free 30-Day Trial</a>
       </div>
     </div>
     <p class="price-note reveal">
-      <span class="price-note-item"><span class="price-note-check">✓</span> 60-day free pilot</span>
+      <span class="price-note-item"><span class="price-note-check">✓</span> 30-day free trial</span>
       <span class="price-note-sep">·</span>
-      <span class="price-note-item"><span class="price-note-check">✓</span> No long-term contracts</span>
+      <span class="price-note-item"><span class="price-note-check">✓</span> No credit card required</span>
       <span class="price-note-sep">·</span>
       <span class="price-note-item"><span class="price-note-check">✓</span> Cancel anytime</span>
     </p>
@@ -2864,7 +2875,7 @@
       <div class="ea-success" id="eaSuccess">You are on the list. We will be in touch within 48 hours.</div>
       <div class="ea-badges reveal d4">
         <div class="ea-badge"><span class="ea-check">✓</span> No credit card</div>
-        <div class="ea-badge"><span class="ea-check">✓</span> 60-day free pilot</div>
+        <div class="ea-badge"><span class="ea-check">✓</span> 30-day free trial</div>
         <div class="ea-badge"><span class="ea-check">✓</span> Cancel anytime</div>
       </div>
     </div>
@@ -2881,7 +2892,7 @@
   <div class="exit-card">
     <button class="exit-close" onclick="closeExit()" aria-label="Close">×</button>
     <div class="exit-eyebrow">Before you go</div>
-    <h2 class="exit-h">Your 60-day pilot<br/>is completely free.</h2>
+    <h2 class="exit-h">Your 30-day trial<br/>is completely free.</h2>
     <p class="exit-p">No credit card. No commitment. We connect everything and you start seeing decisions within 72 hours. Nothing to lose.</p>
     <form class="exit-form" id="exitForm">
       <input type="email" class="exit-input" id="exitEmail" placeholder="Your work email" required aria-label="Email address" />
@@ -2922,7 +2933,7 @@
         <a href="#early-access" class="btn-cta lg">Claim My Pilot Spot</a>
         <a href="mailto:grow@koaland.ai" class="btn-ghost">Schedule a Demo Call</a>
       </div>
-      <div class="fcta-note">60-day free pilot · No credit card · Cancel anytime</div>
+      <div class="fcta-note">30-day free trial · No credit card · Cancel anytime</div>
     </div>
     <div class="footer-grid">
       <div>
@@ -3104,12 +3115,13 @@
     TRY: { symbol: '₺', rate: 38.2, locale: 'tr-TR' }
   };
   let activeCurrency = currencies.EUR;
-  let activePlan = 'observe'; // 'observe' | 'copilot'
-  const planPrices = { observe: 1200, copilot: 2800 };
-  const planLabels = { observe: 'Observe plan cost (annual)', copilot: 'Co-Pilot plan cost (annual)' };
+  let activePlan = 'signal'; // 'signal' | 'observe' | 'copilot'
+  const planPrices = { signal: 599, observe: 1190, copilot: 2490 };
+  const planLabels = { signal: 'Signal plan cost (annual)', observe: 'Observe plan cost (annual)', copilot: 'Co-Pilot plan cost (annual)' };
 
   function setRoiPlan(plan) {
     activePlan = plan;
+    document.getElementById('roi-plan-signal').classList.toggle('active', plan === 'signal');
     document.getElementById('roi-plan-observe').classList.toggle('active', plan === 'observe');
     document.getElementById('roi-plan-copilot').classList.toggle('active', plan === 'copilot');
     document.getElementById('roi-cost-label').textContent = planLabels[plan];
