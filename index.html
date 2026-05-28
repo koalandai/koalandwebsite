@@ -1190,6 +1190,13 @@
     .roi-cur-btn { padding: 5px 13px; border-radius: 7px; border: 1px solid var(--border-2); background: transparent; color: var(--t2); font-size: 0.8rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: all .2s; }
     .roi-cur-btn.active { background: rgba(37,99,235,.16); border-color: rgba(37,99,235,.42); color: #93c5fd; }
     .roi-cur-btn:hover:not(.active) { border-color: var(--t3); color: var(--t1); }
+    .roi-plan-btn { padding: 8px 16px; border-radius: 7px; border: 1px solid var(--border-2); background: transparent; color: var(--t2); cursor: pointer; font-family: inherit; transition: all .2s; display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; }
+    .roi-plan-btn.active { background: rgba(37,99,235,.16); border-color: rgba(37,99,235,.42); color: #93c5fd; }
+    .roi-plan-btn:hover:not(.active) { border-color: var(--t3); color: var(--t1); }
+    .roi-plan-btn .plan-name { font-size: 0.8rem; font-weight: 700; }
+    .roi-plan-btn .plan-price { font-size: 0.7rem; font-weight: 500; opacity: 0.7; }
+    .roi-plan-row { display: flex; align-items: stretch; gap: 8px; margin-bottom: 26px; margin-top: -10px; }
+    @media (max-width: 560px) { .roi-plan-row { flex-direction: column; } }
 
     /* ── CO-PILOT PRICING BIGGER ─────────── */
     .price-card.pop { transform: scale(1.05); z-index: 2; border-color: var(--blue); box-shadow: 0 0 80px rgba(37,99,235,.22), 0 0 0 1px rgba(37,99,235,.25); }
@@ -2341,11 +2348,11 @@
           <button class="roi-cur-btn" data-cur="GBP" onclick="setRoiCurrency('GBP')">£ GBP</button>
           <button class="roi-cur-btn" data-cur="TRY" onclick="setRoiCurrency('TRY')">₺ TRY</button>
         </div>
-        <div class="roi-currency-row" style="margin-top:-10px;flex-wrap:nowrap;">
-          <span class="roi-cur-lbl">Plan</span>
-          <button class="roi-cur-btn active" id="roi-plan-signal" onclick="setRoiPlan('signal')">Signal · €599/mo</button>
-          <button class="roi-cur-btn" id="roi-plan-observe" onclick="setRoiPlan('observe')">Observe · €1,190/mo</button>
-          <button class="roi-cur-btn" id="roi-plan-copilot" onclick="setRoiPlan('copilot')">Co-Pilot · €2,490/mo</button>
+        <span class="roi-cur-lbl" style="display:block;margin-bottom:8px;">Plan</span>
+        <div class="roi-plan-row">
+          <button class="roi-plan-btn active" id="roi-plan-signal" onclick="setRoiPlan('signal')"><span class="plan-name">Signal</span><span class="plan-price">€599/mo</span></button>
+          <button class="roi-plan-btn" id="roi-plan-observe" onclick="setRoiPlan('observe')"><span class="plan-name">Observe</span><span class="plan-price">€1,190/mo</span></button>
+          <button class="roi-plan-btn" id="roi-plan-copilot" onclick="setRoiPlan('copilot')"><span class="plan-name">Co-Pilot</span><span class="plan-price">€2,490/mo</span></button>
         </div>
         <div class="roi-group">
           <label class="roi-label" for="roi-rooms">Number of rooms</label>
